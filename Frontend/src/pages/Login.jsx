@@ -3,11 +3,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
+import { useDispatch } from "react-redux";
+import { setUser } from "../store/authSlice";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +37,13 @@ export default function Login() {
         pauseOnHover: true,
         theme: "light",
       });
+      dispatch(setUser({
+        uid: user.uid,
+        displayName: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+      }));
+      setTimeout(()=>{ window.location.hash = "#/"; }, 800);
       // You can store user info in Redux, Context, or localStorage here
     } catch (error) {
       console.error("Error signing in with Google:", error);

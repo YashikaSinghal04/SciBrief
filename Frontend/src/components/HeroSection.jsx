@@ -17,7 +17,7 @@ export default function HeroSection() {
             <p>Skim or dive deep with a clean reading experience.</p>
           </div>
 
-          <a href="#/summarizer" className="inline-block bg-white text-purple-800 border border-purple-300 hover:border-purple-400 hover:shadow-md font-semibold px-8 py-4 rounded-lg text-lg transition-all">
+          <a href="#/summarizer" className="inline-block rounded-full px-5 py-2 font-semibold text-white text-sm bg-gradient-to-r from-purple-500/60 via-fuchsia-500/50 to-pink-500/60 backdrop-blur-md bg-opacity-40 border border-white/30 shadow-lg hover:scale-105 hover:shadow-xl hover:from-purple-600 hover:to-fuchsia-600 transition-all duration-300">
             Go to summarizer
           </a>
         </div>

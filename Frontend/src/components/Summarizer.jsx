@@ -195,7 +195,7 @@ export default function Summarizer() {
                   <div className="flex flex-col items-center gap-4">
                     <button
                       onClick={handleChooseFile}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold shadow-md transition-colors border border-purple-500"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold shadow-md transition-colors border border-purple-500"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -223,7 +223,7 @@ export default function Summarizer() {
                 <button
                   onClick={onSummarize}
                   disabled={loading || !inputText.trim()}
-                  className="px-8 py-3 sm:px-10 sm:py-3.5 rounded-full bg-white text-purple-700 font-semibold border border-purple-300 hover:border-purple-400 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="rounded-full px-5 py-2 font-semibold text-white text-sm bg-gradient-to-r from-purple-500/60 via-fuchsia-500/50 to-pink-500/60 backdrop-blur-md bg-opacity-40 border border-white/30 shadow-lg hover:scale-105 hover:shadow-xl hover:from-purple-600 hover:to-fuchsia-600 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {loading ? "Working..." : "Summarize"}
                 </button>
